@@ -1,9 +1,9 @@
 import express from 'express';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 import cors from 'cors';
 import db from './models/index.js';
 import countryRouter from './routes/countryRoute.js';
-dotenv.config();
+//dotenv.config();
 
 const app = express();
 const PORT= process.env.PORT || 3000;
