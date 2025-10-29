@@ -12,9 +12,9 @@ import { statusModel } from './Status.js';
 let sequelize;
 
 // Option 1: Check for the single DATABASE_URL (Standard for Railway/Production)
-if (process.env.DATABASE_URL) {
+if (process.env.MYSQL_URL) {
     console.log("Using DATABASE_URL from environment.");
-    sequelize = new Sequelize(process.env.DATABASE_URL, {
+    sequelize = new Sequelize(process.env.MYSQL_URL, {
         dialect: 'mysql', // Tells Sequelize to use MySQL
         logging: false,
         pool: {
