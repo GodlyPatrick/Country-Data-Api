@@ -25,32 +25,32 @@ if (process.env.MYSQL_URL) {
         }
     });
 
-} else {
-    // Option 2: Fallback to separate variables (Standard for local .env files)
-    const {
-        DB_NAME,
-        DB_USER,
-        DB_PASSWORD,
-        DB_HOST
-    } = process.env;
+// } else {
+//     // Option 2: Fallback to separate variables (Standard for local .env files)
+//     const {
+//         DB_NAME,
+//         DB_USER,
+//         DB_PASSWORD,
+//         DB_HOST
+//     } = process.env;
 
-    console.log("Using separate DB variables from .env file.");
-    sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
-        host: DB_HOST,
-        dialect: 'mysql',
-        logging: false,
-        pool: {
-            max: 5,
-            min: 0,
-            acquire: 30000,
-            idle: 10000
-        }
-    });
-}
-// ---------------------------------------------------------------------------------------
+//     console.log("Using separate DB variables from .env file.");
+//     sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+//         host: DB_HOST,
+//         dialect: 'mysql',
+//         logging: false,
+//         pool: {
+//             max: 5,
+//             min: 0,
+//             acquire: 30000,
+//             idle: 10000
+//         }
+//     });
+// }
+// // ---------------------------------------------------------------------------------------
 
-const db = {};
-db.sequelize = sequelize; //store the connection object
+// const db = {};
+// db.sequelize = sequelize; //store the connection object
 
 //load the
 db.Country = countryModel(sequelize, DataTypes);
