@@ -49,8 +49,8 @@ if (process.env.MYSQL_URL) {
 // }
 // // ---------------------------------------------------------------------------------------
 
-// const db = {};
-// db.sequelize = sequelize; //store the connection object
+const db = {};
+db.sequelize = sequelize; //store the connection object
 
 //load the
 db.Country = countryModel(sequelize, DataTypes);
