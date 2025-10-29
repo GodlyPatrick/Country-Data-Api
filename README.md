@@ -1,4 +1,4 @@
-# 🌍 HNG Stage 2 — Country Currency & Exchange API
+git # 🌍 HNG Stage 2 — Country Currency & Exchange API
 
 A RESTful API that fetches global country data and currency exchange rates from external APIs, caches them in a MySQL database, and exposes CRUD endpoints with computed GDP estimates.  
 
@@ -27,7 +27,7 @@ This project was built as part of the **HNG Internship Stage 2 Backend Task**.
 
 ## 📂 Project Structure
 
-HNG-stage-2/
+```HNG-stage-2/
 │── app.js
 │── package.json
 │── .env
@@ -58,7 +58,7 @@ HNG-stage-2/
 - **Axios** — To fetch external APIs  
 - **Canvas** — For generating the summary image  
 - **dotenv & cors** — Environment setup and CORS support  
-
+```
 ---
 
 ## 🧪 API Endpoints
@@ -212,6 +212,7 @@ Access it via
 If no image exists, the response will be:
 
 { "error": "Summary image not found" }
+
 
 🧑🏽‍💻 Author
 
